@@ -6,6 +6,7 @@ import { fromError } from "zod-validation-error";
 import { BaseError } from "@/lib/errors";
 
 export const env = createEnv({
+  skipValidation: true,
   client: {
     NEXT_PUBLIC_SENTRY_DSN: z.string().optional(),
   },
