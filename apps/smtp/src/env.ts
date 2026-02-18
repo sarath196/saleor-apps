@@ -3,6 +3,7 @@ import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
 export const env = createEnv({
+  skipValidation: true,
   client: {
     NEXT_PUBLIC_SENTRY_DSN: z.string().optional(),
   },
