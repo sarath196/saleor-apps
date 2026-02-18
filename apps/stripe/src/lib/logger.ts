@@ -6,7 +6,7 @@ import { env } from "./env";
 
 rootLogger.settings.maskValuesOfKeys = ["token", "secretKey"];
 
-if (env.NODE_ENV === "development") {
+if (env.NODE_ENV === "development" || env.APP_LOG_LEVEL === "debug" || env.APP_LOG_LEVEL === "trace") {
   attachLoggerConsoleTransport(rootLogger);
 }
 

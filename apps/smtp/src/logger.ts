@@ -5,7 +5,7 @@ import { env } from "./env";
 
 rootLogger.settings.maskValuesOfKeys = ["metadata", "username", "password", "apiKey"];
 
-if (env.NODE_ENV !== "production") {
+if (env.NODE_ENV !== "production" || env.APP_LOG_LEVEL === "debug" || env.APP_LOG_LEVEL === "trace") {
   attachLoggerConsoleTransport(rootLogger);
 }
 
